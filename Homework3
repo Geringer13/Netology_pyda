@@ -1,0 +1,37 @@
+
+
+
+Task #3
+descriptions = [
+['браслет', 'xiaomi', 'mi', 'band', '2', 'умный', 'браслет', 'xiaomi', 'mi', 'лидер', 'в', 'линейке', 'xiaomi', 'фитнес', 'браслет', 'для', 'android', '4', 'ios', '7', 'экран', 'oled', 'лучший', 'выбор', 'xiaomi'],
+['браслет', 'huawei', 'honor', 'band', '3', 'фитнес', 'браслет', 'влагозащищенный', 'сенсорный', 'экран', 'android', 'ios', 'мониторинг', 'сна'],
+['браслет', 'samsung', 'gear', 'fit2', 'pro', 'влагозащищенный', 'сенсорный', 'amoled-экран', 'мониторинг', 'сна', 'калорий', 'новинка', 'samsung'],
+]
+
+words1 = []
+words2 = []
+words3 = []
+
+for a in descriptions[0]:
+    if a not in words1:
+        words1.append(a)
+print(words1)
+
+for a in descriptions[1]:
+    if a not in words2:
+        words2.append(a)
+print(words2)
+
+for a in descriptions[2]:
+    if a not in words3:
+        words3.append(a)
+print(words3)
+
+diff1 = len(descriptions[0]) - len(words1)
+print(diff1)
+
+diff2 = len(descriptions[1]) - len(words2)
+print(diff2)
+
+diff3 = len(descriptions[2]) - len(words3)
+print(diff3)
