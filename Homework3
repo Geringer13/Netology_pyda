@@ -1,7 +1,14 @@
+# Task 1
+
+stats = {'facebook': 55, 'yandex': 120, 'vk': 115, 'google': 99, 'email': 42, 'ok': 98}
+
+max(stats.items(), key = lambda x: x[1])
+
+#result
+('yandex', 120)
 
 
-
-Task #3
+# Task 2
 descriptions = [
 ['браслет', 'xiaomi', 'mi', 'band', '2', 'умный', 'браслет', 'xiaomi', 'mi', 'лидер', 'в', 'линейке', 'xiaomi', 'фитнес', 'браслет', 'для', 'android', '4', 'ios', '7', 'экран', 'oled', 'лучший', 'выбор', 'xiaomi'],
 ['браслет', 'huawei', 'honor', 'band', '3', 'фитнес', 'браслет', 'влагозащищенный', 'сенсорный', 'экран', 'android', 'ios', 'мониторинг', 'сна'],
@@ -35,3 +42,33 @@ print(diff2)
 
 diff3 = len(descriptions[2]) - len(words3)
 print(diff3)
+
+['браслет', 'xiaomi', 'mi', 'band', '2', 'умный', 'лидер', 'в', 'линейке', 'фитнес', 'для', 'android', '4', 'ios', '7', 'экран', 'oled', 'лучший', 'выбор']
+['браслет', 'huawei', 'honor', 'band', '3', 'фитнес', 'влагозащищенный', 'сенсорный', 'экран', 'android', 'ios', 'мониторинг', 'сна']
+['браслет', 'samsung', 'gear', 'fit2', 'pro', 'влагозащищенный', 'сенсорный', 'amoled-экран', 'мониторинг', 'сна', 'калорий', 'новинка']
+6
+1
+1
+
+# Task 3
+
+hw_dict = {}
+n = int(input())
+
+with open('stats.csv') as number:
+    for line in number:
+        line = line.strip().split(',')
+        hw_dict[tuple(line[:n])] = line[n]
+for key,value in hw_dict.items():
+    print(key, value)
+
+1
+('14',) 3946
+('12',) 12250
+('28',) 21895
+('25',) 4200
+('20',) 26344
+('22',) 19918
+('4',) 14495
+('24',) 8245
+('11',) 3790
