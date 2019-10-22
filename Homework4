@@ -88,3 +88,33 @@ add_shelf(directories)
 
 5
 {'1': ['2207 876234', '11-2', '5455 028765'], '2': ['10006', '5400 028765', '5455 002299'], '3': [], '4': [], '8': [], '5': []}
+
+
+def move(data):
+   
+    number_doc = input('Type document number ')
+    number_shelf = input('Type shelf number ')
+    saved = 0
+    
+    for key, values in data.items():
+    
+        if number_doc not in data:
+                                 
+            if number_doc in values:
+                saved = values.pop(values.index(number_doc))
+                
+           
+    if number_shelf in data:
+        data[number_shelf].append(saved)
+        return data
+    
+    if number_shelf not in data:
+        return 'This shelf not found'
+
+move(directories)
+
+Type document number 11-2
+Type shelf number 3
+{'1': ['2207 876234', '5455 028765'],
+ '2': ['10006', '5400 028765', '5455 002299'],
+ '3': ['11-2']}
