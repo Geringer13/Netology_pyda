@@ -1,0 +1,15 @@
+Task 1
+
+purchases = {}
+import json
+with open('purchase_log.txt') as file:
+   
+    for line in file:
+        d = json.loads(line)
+#         for key, values in purchases.items():
+        purchases = {d['user_id'] : d['category']}
+        print(purchases)
+        
+{'user_id': 'category'}
+{'1840e0b9d4': 'РџСЂРѕРґСѓРєС‚С‹'}
+{'4e4f90fcfb': 'Р\xadР»РµРєС‚СЂРѕРЅРёРєР°'}
