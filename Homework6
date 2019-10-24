@@ -13,3 +13,18 @@ with open('purchase_log.txt') as file:
 {'user_id': 'category'}
 {'1840e0b9d4': 'РџСЂРѕРґСѓРєС‚С‹'}
 {'4e4f90fcfb': 'Р\xadР»РµРєС‚СЂРѕРЅРёРєР°'}
+
+Task 2
+
+def function(list1 = 'visit_log.csv', list2 = 'purchase_log.txt', list3 = 'outcome.csv'):
+    d2 = {}
+    import json
+    with open(list1, 'r') as data1, open(list2, 'r') as data2, open(list3, 'a') as data3:
+         for line1 in data1:
+                for line2 in data2:
+                    d2 = json.loads(line2)
+                    if d2['user_id'] in line1:
+                        data3.write(d2['category'])
+                             
+            
+function()
